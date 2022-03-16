@@ -39,7 +39,7 @@ function App() {
       setLoading(false);
     };
     fetchWeather();
-  }, [city]);
+  }, [city, icon]);
 
   // use value in city  and fecth api --> city is the dependency.
   //-------Event Handler
@@ -69,6 +69,7 @@ function App() {
             <div>
               {weatherInfo}
               <img
+                alt={""}
                 style={{ width: "30px", height: "30px" }}
                 src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
               />
